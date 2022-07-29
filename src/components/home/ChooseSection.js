@@ -15,22 +15,22 @@ export const ChooseSection = () => {
                         <div className="grid lg:grid-cols-2 gap-6 text-[#292929]">
 
                             <div className="bg-[#FAF7F2] flex items-center justify-center rounded-md p-5 font-semibold text-lg">
-                                <img  height={40} width={40} src="https://themefie.com/html/foodka/assets/img/icon/1.png" alt="img" />
+                                <img height={40} width={40} src="https://themefie.com/html/foodka/assets/img/icon/1.png" alt="img" />
                                 <h1 className="ml-5">Fresh food</h1>
                             </div>
 
                             <div className="bg-[#FAF7F2] flex items-center justify-center rounded-md p-5 font-semibold text-lg">
-                                <img  height={40} width={40} src="https://themefie.com/html/foodka/assets/img/icon/2.png" alt="img" className='mr-5' />
+                                <img height={40} width={40} src="https://themefie.com/html/foodka/assets/img/icon/2.png" alt="img" className='mr-5' />
                                 <h1 className="ml-5">Fast Delivery</h1>
                             </div>
 
                             <div className="bg-[#FAF7F2] flex items-center justify-center rounded-md p-5 font-semibold text-lg">
-                                <img  height={40} width={40} src="https://themefie.com/html/foodka/assets/img/icon/3.png" alt="img" className='mr-5' />
+                                <img height={40} width={40} src="https://themefie.com/html/foodka/assets/img/icon/3.png" alt="img" className='mr-5' />
                                 <h1 className="ml-5">Quality Maintain</h1>
                             </div>
 
                             <div className="bg-[#FAF7F2] flex items-center justify-center rounded-md p-5 font-semibold text-lg">
-                                <img  height={40} width={40} src="https://themefie.com/html/foodka/assets/img/icon/4.png" alt="img" className='mr-5' />
+                                <img height={40} width={40} src="https://themefie.com/html/foodka/assets/img/icon/4.png" alt="img" className='mr-5' />
                                 <h1 className="ml-5">24/7 Service</h1>
                             </div>
                         </div>

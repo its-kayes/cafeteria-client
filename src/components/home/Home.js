@@ -1,5 +1,8 @@
 import React from 'react';
+import Products from '../../shared/Products';
 import { ChooseSection } from './ChooseSection';
+import { ChooseUs } from './ChooseUs';
+import FoodAd from './FoodAd';
 import { HomeBanner } from './HomeBanner';
 
 const Home = () => {
@@ -7,6 +10,9 @@ const Home = () => {
         <div>
             <HomeBanner> </HomeBanner>
             <ChooseSection> </ChooseSection>
+            <FoodAd> </FoodAd>
+            {/* <Products> </Products> */}
+            <ChooseUs> </ChooseUs>
         </div>
     );
 };
