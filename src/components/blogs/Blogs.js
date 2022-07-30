@@ -1,0 +1,64 @@
+import React from 'react'
+import { SharedBanner } from "../../shared/SharedBanner"
+
+
+const Blogs = () => {
+//   const [foods, setFoods] = useState([])
+//   useEffect(() => {
+//     fetch('http://localhost:3000/api/blog')
+//       .then(res => res.json())
+//       .then(data => {
+//         console.log(data.blogs);
+//         setFoods(data.blogs);
+//       })
+//   }, [])
+//   console.log(foods);
+  return (
+    <div>
+      <SharedBanner header={"Blogs"} title={"FOOD BLOG"} name={"Blog"} />
+      <div className="grid-container md:grid grid-cols-12">
+        <div className=" item1 col-span-8">
+          <div className="grid-container md:grid grid-cols-2 gap-4 p-7">
+            {/* {
+              foods.map(food => <div key={food._id}>
+                <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
+                  <figure><img src={food.img} alt="Shoes" /></figure>
+                  <div className="card-body">
+                    <h2 className="card-title">{food.name}</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                  </div>
+                </div>
+              </div>)
+            } */}
+          </div>
+        </div>
+        <div className=" item2 col-span-4">
+          <div className='p-7'>
+            <div className="form-control">
+              <div className="input-group">
+                <input className='w-full p-3 input input-bordered' type="text" placeholder="Search…" />
+                <button className="btn btn-square bg-slate-200 border-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+              </div>
+            </div>
+            <div className='mt-11 bg-orange-50 p-5 rounded'>
+              <h1 className='text-2xl font-medium mb-6'>Recent Post</h1>
+
+              {/* {
+                foods.map(food => <div key={food._id} className='flex items-center mb-5'>
+                  <img width={60} height={80} className='' src={food.img} alt="" />
+                  <h4 className='font-medium p-3 text-lg'>{food.name}</h4>
+                </div>)
+              } */}
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Blogs;

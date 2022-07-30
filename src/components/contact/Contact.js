@@ -4,7 +4,7 @@ import { SharedBanner } from '../../shared/SharedBanner';
 const Contact = () => {
     return (
         <div>
-            <SharedBanner props={"Contact with Us"} />
+            <SharedBanner header={"Contact with Us"} title={"contact"} name={"Contact"}/>
             <div className='flex justify-around bg-[#FAF7F2] h-screen items-center p-40'>
                 <div className=''>
                     <div className='flex mt-6'>
