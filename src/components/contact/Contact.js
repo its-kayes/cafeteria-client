@@ -4,19 +4,19 @@ import { SharedBanner } from '../../shared/SharedBanner';
 const Contact = () => {
     return (
         <div>
-            <SharedBanner />
+            <SharedBanner props={"Contact with Us"} />
             <div className='flex justify-around bg-[#FAF7F2] h-screen items-center p-40'>
                 <div className=''>
                     <div className='flex mt-6'>
-                        <img  src='/location.png' alt='location' width='25px' height='25px' />
+                        <img src='/location.png' alt='location' width='25px' height='25px' />
                         <p className='px-3 font-sans  font-semibold'>4920 Trails End Road Ft United States, FL 33311</p>
                     </div>
                     <div className='flex mt-6'>
-                        <img  src='/envelope.png' alt='envelope' width='25px' height='25px' />
+                        <img src='/envelope.png' alt='envelope' width='25px' height='25px' />
                         <p className='px-3 font-sans  font-semibold'>ordernow@foodka.com</p>
                     </div>
                     <div className='flex mt-6'>
-                        <img  src='/phone_002.png' alt='location' width='25px' height='25px' />
+                        <img src='/phone_002.png' alt='location' width='25px' height='25px' />
                         <p className='px-3 font-sans  font-semibold'>+997 509 153 849</p>
                     </div>
                     <div className='mt-6'>

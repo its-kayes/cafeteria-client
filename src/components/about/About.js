@@ -8,7 +8,7 @@ import Testimonial from './Testimonial';
 const About = () => {
     return (
         <div>
-            <SharedBanner />
+            <SharedBanner props={"About us"} />
             <OurHistory />
             <ChooseSection />
             <ParallaxSection />
