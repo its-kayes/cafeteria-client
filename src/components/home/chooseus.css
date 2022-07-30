@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Satisfy&display=swap');
-.header1{
-    padding-top: 120px;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.header1 {
+    /* padding-top: 120px; */
     font-family: 'Satisfy', cursive;
     color: red;
     font-size: 32px;
 }
-.header2{
-    font-family: 'Barlow', sans-serif;
-    font-size: 42px;
-    color: #292929;
+
+.header2 {
+    /* padding-top: 1px; */
+    font-family: 'Satisfy', cursive;
+    color: #FBC813;
+    font-size: 32px;
 }
+
+.header3 {
+    font-family: 'Bebas Neue', cursive;
+}
+
 /* .btn{
     font-family: 'Barlow', sans-serif;
     margin-left: 18px;

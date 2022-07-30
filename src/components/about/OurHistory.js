@@ -7,7 +7,7 @@ const OurHistory = () => {
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">
           <div className='text-center lg:text-left'>
-            <h1 className="text-[#dc3545] mb-4 text-4xl awesome-title">Our History</h1>
+            <h1 className="text-[#dc3545] mb-4 text-4xl awesome-title header1">Our History</h1>
             <h1 className="text-5xl font-semibold">Origins of the restaurant</h1>
             <p className="py-6 text-[#5f5f5f]">Sharing knowledge and skills is what we do. With passion. That’s why the Alimentarium organises daily culinary workshops and classes led by qualified chefs. A neque malesuada in tortor eget justo mauris nec dolor. Consequat risus vitae, ac ac et preparation. <br /><br />
 

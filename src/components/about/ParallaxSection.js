@@ -13,7 +13,7 @@ const ParallaxSection = () => {
         <div className="bg-opacity-60"></div>
         <div style={{ width: '1245px', justifyContent: 'space-between' }} className="flex items-center flex-col lg:flex-row py-32">
           <div className="text-left lg:text-left">
-            <h1 className=" mb-4 text-4xl header1 text-[#FDC913]">
+            <h1 className=" mb-4 text-4xl header2 text-[#FDC913]">
               Why choose us
             </h1>
             <h1 className="text-5xl font-bold text-white">
