@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useFood from '../hook/useFood';
 import Product from './Product';
 // import { useQuery } from 'react-query';
 // import Loader from '../Loader/Loader';
@@ -9,36 +10,8 @@ import Product from './Product';
 
 const Products = () => {
 
-    // let data = useProducts();
-
-    const [products, setProducts] = useState([])
-    const [isLoading, setLoading] = useState(false)
-
-    // let {data, isLoading, refetch} = useQuery('products', ()=> fetch('http://localhost:3000/api/product').then(res => res.json()))
-
-    // if(isLoading) {
-    //     return <Loader> </Loader>
-    // }
-
-    // let products = data.products
-
-    // console.log(data);
-
-    // setProducts(data.products);
-
-    // useEffect(() => {
-    //     setLoading(true)
-    //     fetch('http://localhost:3000/api/product')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             setProducts(data.products)
-    //             setLoading(false)
-    //         })
-    // }, [])
-
-    if (isLoading) return <p className='text-center'>Products Loading...</p>
-    if (!products) return <p>No profile data</p>
+    let foods = useFood([]);
+    let totalFoods = foods[0]
 
     return (
         <div className='px-10'>
@@ -103,9 +76,9 @@ const Products = () => {
 
                 <div className="main__products grid gap-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 mt-10">
                     {
-                        products.slice(0, 4).map(product => <Product
-                            product={product}
-                            key={product._id}
+                        totalFoods?.slice(0, 4).map(totalFood => <Product
+                            totalFood={totalFood}
+                            key={totalFood._id}
                         />)
                     }
                 </div>

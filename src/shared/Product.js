@@ -17,31 +17,29 @@ const Product = ({ totalFood }) => {
     // const products = useProducts();
 
     const { title, img, status, price, rating, desc, _id } = totalFood;
-    // const addToCart = (id) => {
-    //     // router.push(`/singleproduct/${id}`)
-    //     const quantity = 1;
-    //     const cartDetail = { id, quantity }
 
+    const singleDetails = (id) => {
+        const quantity = 1;
+        const cartDetail = { id, quantity }
 
-
-    //     fetch('http://localhost:3000/api/cart', {
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(cartDetail)
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data)
-    //         })
-    // }
+        fetch('http://localhost:3000/api/cart', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(cartDetail)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+    }
     return (
         <div className="product__item">
             <div className="w-full p-4">
                 <a href="" className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
-                    <div className="relative pb-48 overflow-hidden">
-                        <img src={`08.png`}  alt='pro' />
+                    <div className="relative overflow-hidden">
+                        <img src={img}  alt='pro' />
                     </div>
                     <div className="p-4">
                         <div className="flex justify-between items-center">
@@ -63,9 +61,9 @@ const Product = ({ totalFood }) => {
                             <div>
                                 <span className="font-bold text-xl">{price}</span>&nbsp;<span className="text-sm font-semibold">BDT</span>
                             </div>
-                            {/* <div>
-                                <button onClick={() => addToCart(_id)} className="btn btn-sm text-white"><AiOutlineShoppingCart className='mr-3' /> Add to Cart</button>
-                            </div> */}
+                            <div>
+                                <button onClick={() => singleDetails(_id)} className="btn btn-sm text-white"><AiOutlineShoppingCart className='mr-3' /> Add to Cart</button>
+                            </div>
                             {/* <div>
                                 <button onClick={() => router.push({
                                     pathname: '/singleproduct/[pid]',
