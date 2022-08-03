@@ -7,7 +7,7 @@ import Rating from "./Rating";
 
 // import Rating from './rating';
 
-const Product = ({ product }) => {
+const Product = ({ totalFood }) => {
     // const Product = ({ product }) => {
 
     // const Product = () => {
@@ -16,7 +16,7 @@ const Product = ({ product }) => {
     // const router = useRouter();
     // const products = useProducts();
 
-    const { title, img, status, price, rating, desc, _id } = product;
+    const { title, img, status, price, rating, desc, _id } = totalFood;
     // const addToCart = (id) => {
     //     // router.push(`/singleproduct/${id}`)
     //     const quantity = 1;
@@ -41,7 +41,7 @@ const Product = ({ product }) => {
             <div className="w-full p-4">
                 <a href="" className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                     <div className="relative pb-48 overflow-hidden">
-                        <img src={`/assets/08.png`} layout='fill' alt='pro' />
+                        <img src={`08.png`}  alt='pro' />
                     </div>
                     <div className="p-4">
                         <div className="flex justify-between items-center">

@@ -1,33 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import useFood from '../../hook/useFood';
+import Product from '../../shared/Product';
 import { SharedBanner } from '../../shared/SharedBanner';
 
 const Menu = () => {
-    let foods  = useFood([]);
+    let foods = useFood([]);
 
-    const [products, setProducts] = useState([])
-    const [isLoading, setLoading] = useState(false)
+    // const [products, setProducts] = useState([])
+    // const [isLoading, setLoading] = useState(false)
 
-    useEffect(() => {
-        setLoading(true)
-        fetch("http://localhost:5000/foods")
-            .then(res => res.json())
-            .then(data => {
-                setProducts(data)
-                setLoading(false)
-            })
-    }, [])
+    // useEffect(() => {
+    //     setLoading(true)
+    //     fetch("http://localhost:5000/foods")
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setProducts(data)
+    //             setLoading(false)
+    //         })
+    // }, [])
 
-    if (isLoading) return <p className='text-center'>Products Loading...</p>
-    if (!products) return <p>No profile data</p>
+    // if (isLoading) return <p className='text-center'>Products Loading...</p>
+    // if (!products) return <p>No profile data</p>
 
 
     // console.log(products);
-    console.log(foods);
+    let totalFoods = foods[0]
+    console.log(totalFoods);
+
 
     return (
         <>
             <SharedBanner header={"Choose you items"} title={"OUR MENU"} name={"Menu Tab"} />
+{/* 
+            <div className='text-black'>
+                {
+                    totalFoods?.map((food, index) => <p> kayes {index + 1} </p>)
+                }
+            </div> */}
 
             <div className="products mt-10 px-10 my-10">
                 <div className="products__category mb-10">
@@ -84,12 +93,12 @@ const Menu = () => {
                 </div>
 
                 <div className="main__products grid gap-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 mt-10">
-                    {/* {
-                        products.map(product => <Product
-                            product={product}
-                            key={product._id}
+                    {
+                        totalFoods?.map(totalFood => <Product
+                            totalFood={totalFood}
+                            key={totalFood?._id}
                         />)
-                    } */}
+                    }
                 </div>
             </div>
 

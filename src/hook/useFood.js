@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from "react-query";
 import Loader from '../shared/Loader';
 
@@ -19,20 +19,37 @@ const useFood = () => {
 
     // return [data];
 
+    // let foods = useFood([]);
+
+    const [products, setProducts] = useState([])
+    const [isLoading, setLoading] = useState(false)
+
+    useEffect(() => {
+        setLoading(true)
+        fetch("http://localhost:5000/foods")
+            .then(res => res.json())
+            .then(data => {
+                setProducts(data.data)
+                setLoading(false)
+            })
+    }, [])
+
+    if (isLoading) return <p className='text-center'>Products Loading...</p>
+    if (!products) return <p>No profile data</p>
 
 
 
 
-    let { data, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:3000/foods').then(res => res.json()))
+    // let { data, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:3000/foods').then(res => res.json()))
 
-    if (isLoading) {
-        return <Loader> </Loader>
-    }
+    // if (isLoading) {
+    //     return <Loader> </Loader>
+    // }
 
-    console.log(data);
+    // console.log(data);
 
 
-    return [data];
+    return [products, setProducts];
 };
 
 export default useFood;
