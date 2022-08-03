@@ -24,7 +24,7 @@ export const HomeBanner = () => {
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img width={800} src="https://i.ibb.co/WxJctzG/1-007.png" alt="img" className='mr-5 mt-56' />
                         <div className='mb-32'>
-                            <h1 className="text-3xl font-bold awesome-title text-red-600">Japanese Test</h1>
+                            <h1 className="text-3xl font-bold text-red-600 header1">Japanese Test</h1>
                             <p className="py-6 text-6xl font-semibold">Different Spice For A Different Taste</p>
                             <p>You need not only Just Food Stalls with Persons but also specialized equipment  start the Fast Food</p>
                             <button className="hover:bg-transparent duration-500 ease-in btn rounded-full border-0 text-black p-1 mt-8"><span className='btn rounded-full border-0 text-black px-12  bg-[#fdc913] hover:bg-[#fdc913]'>Get IT NOW</span></button>

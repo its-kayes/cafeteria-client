@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from 'react';
+import useFood from '../../hook/useFood';
 import { SharedBanner } from '../../shared/SharedBanner';
 
 const Menu = () => {
+    let foods  = useFood([]);
 
-    // const [products, setProducts] = useState([])
-    // const [isLoading, setLoading] = useState(false)
+    const [products, setProducts] = useState([])
+    const [isLoading, setLoading] = useState(false)
 
-    // useEffect(() => {
-    //     setLoading(true)
-    //     fetch('http://localhost:3000/api/product')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setProducts(data.products)
-    //             setLoading(false)
-    //         })
-    // }, [])
+    useEffect(() => {
+        setLoading(true)
+        fetch("http://localhost:5000/foods")
+            .then(res => res.json())
+            .then(data => {
+                setProducts(data)
+                setLoading(false)
+            })
+    }, [])
 
-    // if (isLoading) return <p className='text-center'>Products Loading...</p>
-    // if (!products) return <p>No profile data</p>
+    if (isLoading) return <p className='text-center'>Products Loading...</p>
+    if (!products) return <p>No profile data</p>
+
+
+    // console.log(products);
+    console.log(foods);
 
     return (
         <>
