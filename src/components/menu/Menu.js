@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import useFood from '../../hook/useFood';
+import Items from '../../shared/Items';
 import Product from '../../shared/Product';
 import { SharedBanner } from '../../shared/SharedBanner';
 
 const Menu = () => {
-    let foods = useFood([]);
+    // let foods = useFood([]);
+    // let totalFoods = foods[0]
+
+    // console.log(totalFoods)
 
     // const [products, setProducts] = useState([])
     // const [isLoading, setLoading] = useState(false)
@@ -24,8 +28,8 @@ const Menu = () => {
 
 
     // console.log(products);
-    let totalFoods = foods[0]
-    console.log(totalFoods);
+    // let totalFoods = foods[0]
+    // console.log(totalFoods);
 
 
     return (
@@ -91,14 +95,16 @@ const Menu = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className="main__products grid gap-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 mt-10">
+                {/* <div className="main__products grid gap-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 mt-10">
                     {
                         totalFoods?.map(totalFood => <Product
                             totalFood={totalFood}
                             key={totalFood?._id}
                         />)
                     }
+                </div> */}
+                <div>
+                    <Items> </Items>
                 </div>
             </div>
 
