@@ -25,22 +25,9 @@ const PerProduct = () => {
     const [isLoading, setLoading] = useState(false)
 
 
-
-    // let { data, isLoading, refetch } = useQuery('singleproduct', () => fetch("http://localhost:5000/foods/idx").then(res => res.json()))
-
-
-    // if (isLoading) {
-    //     return <Loader> </Loader>
-    // }
-
-    // if (!data) {
-    //     return refetch();
-    // }
-    // console.log("id page entar kore");
-
     useEffect(() => {
         // setLoading(true)
-        fetch(`http://localhost:5000/foods/${id}`, )
+        fetch(`http://localhost:5000/foods/${id}`,)
             .then(res => res.json())
             .then(result => {
                 setItem(result.data)
@@ -48,21 +35,10 @@ const PerProduct = () => {
                 // console.log(result.data);
             })
     }, [id])
-    if (isLoading) return <p className='text-center'>Products Loading...</p>
+    // if (isLoading) return <p className='text-center'>Products Loading...</p>
+    if (isLoading) return <Loader />
     if (!item) return <p>No profile data</p>
 
-    // setTotalPrice(item?.price);
-
-    // if (item?.products === true) {
-
-    // }
-    // let item = product.products;
-    // console.log(data)
-
-    // let product = data?.products;
-
-    // console.log(totalPrice);
-    // console.log(item?.products.title);
     console.log(item.foodId);
 
 
@@ -71,24 +47,24 @@ const PerProduct = () => {
 
         let data = {
             totalPrice: (quantity * price),
-            email: 2,
+            email: "kayes1@gmail.com",
             quantity: quantity,
-            name: name,
+            title: name,
             img: img,
             size: 10
         }
         console.log(data);
 
 
-        // fetch("http://localhost:3000/api/orders", {
-        //     method: "POST",
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // })
-        //     .then(res => res.json())
-        //     .then(result => console.log(result));
+        fetch("http://localhost:5000/orders/order", {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => console.log(result));
 
     }
 
@@ -112,7 +88,6 @@ const PerProduct = () => {
                             </div>
                         </div>
                         <div className='lg:w-3/4 scroll-my-80'>
-                            {/* <h1 className='text-5xl'>Maxican Pizza Test Better</h1> */}
                             <h1 className='text-5xl'>{item?.title}</h1>
                             <div className='flex justify-between items-center'>
                                 <p className='text-2xl font-bold'>${item?.price}</p>
