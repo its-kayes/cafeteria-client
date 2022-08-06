@@ -68,7 +68,8 @@ export const Navbar = () => {
                                 {menuItems}
                             </ul>
                         </li> */}
-                        <li tabIndex="0">
+
+                        {/* <li tabIndex="0">
                             <a>
                                 <p className='font-semibold'> PAGES </p>
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
@@ -79,10 +80,12 @@ export const Navbar = () => {
                                 <li><Link to='/menulist' className='font-semibold'>Menu List</Link></li>
                                 <li><Link to='/shop' className='font-semibold'>Shop</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
                         {/* <li><Link to='/cart'><p className='font-semibold'>CART</p></Link></li> */}
                         <li><Link to='/about'><p className='font-semibold'>ABOUT</p></Link></li>
                         <li><Link to='/contact'><p className='font-semibold'>CONTACT</p></Link></li>
+                        <li><Link to='/blogs'><p className='font-semibold'>BLOGS</p></Link></li>
+
                     </ul>
                 </div>
             </div>

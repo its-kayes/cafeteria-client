@@ -11,6 +11,7 @@ import Menu from './components/menu/Menu';
 import { Navbar } from './Navbar/Navbar';
 import PerProduct from './components/perProduct/PerProduct';
 import Cart from './components/cart/Cart';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/foods/:id' element={<PerProduct />} />
         <Route path='/cart' element={<Cart />} />
       </Routes>
+      <Footer />
       <ToastContainer />
     </div>
   );
