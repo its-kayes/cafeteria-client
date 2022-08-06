@@ -35,7 +35,7 @@ const Menu = () => {
     return (
         <>
             <SharedBanner header={"Choose you items"} title={"OUR MENU"} name={"Menu Tab"} />
-{/* 
+            {/* 
             <div className='text-black'>
                 {
                     totalFoods?.map((food, index) => <p> kayes {index + 1} </p>)

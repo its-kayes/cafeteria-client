@@ -6,6 +6,7 @@ import Contact from './components/contact/Contact';
 import Blogs from './components/blogs/Blogs';
 import Menu from './components/menu/Menu';
 import { Navbar } from './Navbar/Navbar';
+import PerProduct from './components/perProduct/PerProduct';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/menu' element={<Menu />} />
+        <Route path='/foods/:id' element={<PerProduct />} />
       </Routes>
     </div>
   );

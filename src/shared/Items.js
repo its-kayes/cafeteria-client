@@ -1,9 +1,11 @@
 import React from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 import useFood from '../hook/useFood';
 import Rating from './Rating';
 
 const Items = () => {
+    let navigate = useNavigate();
 
     let items = useFood([]);
     let foods = items[0]
@@ -11,6 +13,8 @@ const Items = () => {
 
     let singleDetails = (id) => {
         console.log(id);
+        navigate(`/foods/${id}`);
+
     }
 
     return (
@@ -43,7 +47,7 @@ const Items = () => {
                                         <span className="font-bold text-xl">{food.price}</span>&nbsp;<span className="text-sm font-semibold">BDT</span>
                                     </div>
                                     <div>
-                                        <button onClick={() => singleDetails(food._id)} className="btn btn-sm text-white"><AiOutlineShoppingCart className='mr-3' /> Add to Cart</button>
+                                        <button onClick={() => singleDetails(food.foodId)} className="btn btn-sm text-white"><AiOutlineShoppingCart className='mr-3' /> Add to Cart</button>
                                     </div>
                                 </div>
                             </div>
