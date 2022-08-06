@@ -7,6 +7,7 @@ import Blogs from './components/blogs/Blogs';
 import Menu from './components/menu/Menu';
 import { Navbar } from './Navbar/Navbar';
 import PerProduct from './components/perProduct/PerProduct';
+import Cart from './components/cart/Cart';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/foods/:id' element={<PerProduct />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
     </div>
   );

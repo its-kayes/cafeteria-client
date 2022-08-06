@@ -26,7 +26,7 @@ const PerProduct = () => {
 
 
     useEffect(() => {
-        // setLoading(true)
+        setLoading(true)
         fetch(`http://localhost:5000/foods/${id}`,)
             .then(res => res.json())
             .then(result => {
@@ -54,7 +54,6 @@ const PerProduct = () => {
             size: 10
         }
         console.log(data);
-
 
         fetch("http://localhost:5000/orders/order", {
             method: "POST",

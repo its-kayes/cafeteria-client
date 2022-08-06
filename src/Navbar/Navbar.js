@@ -93,6 +93,11 @@ export const Navbar = () => {
                         <p className='ml-4 font-semibold'>+99 097452715</p>
                     </div>
 
+                    <li><Link to='/cart'><div className='flex justify-between items-center'>
+                        <img src="https://i.ibb.co/r47stft/shopping-cart.png" alt="img" />
+                        <p className='font-semibold px-4 pt-1'>$99+ </p>
+                    </div></Link></li>
+
                     {/* {
                         email ?
                             <li><Link to='/cart'><div>
