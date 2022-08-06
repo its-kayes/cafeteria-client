@@ -1,4 +1,7 @@
+import React from 'react';
 import './App.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Routes, Route, Link } from "react-router-dom";
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -8,6 +11,7 @@ import Menu from './components/menu/Menu';
 import { Navbar } from './Navbar/Navbar';
 import PerProduct from './components/perProduct/PerProduct';
 import Cart from './components/cart/Cart';
+
 
 function App() {
   return (
@@ -22,6 +26,7 @@ function App() {
         <Route path='/foods/:id' element={<PerProduct />} />
         <Route path='/cart' element={<Cart />} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

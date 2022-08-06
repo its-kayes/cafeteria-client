@@ -6,8 +6,8 @@ const useFood = () => {
 
     // let [foods, setFoods] = useState([]);
 
-    // let { data:food , isLoading, refetch } = useQuery("foods", () => fetch("http://localhost:5000/foods").then(res => res.json()))
-    // let { data, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/foods').then(res => res.json()))
+    // let { data:food , isLoading, refetch } = useQuery("foods", () => fetch("https://cafeteria-x.herokuapp.com/foods").then(res => res.json()))
+    // let { data, isLoading, refetch } = useQuery('products', () => fetch('https://cafeteria-x.herokuapp.com/foods').then(res => res.json()))
 
     // if (isLoading) {
     //     return <Loader> </Loader>
@@ -26,7 +26,7 @@ const useFood = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch("http://localhost:5000/foods")
+        fetch("https://cafeteria-x.herokuapp.com/foods")
             .then(res => res.json())
             .then(data => {
                 setProducts(data.data)
@@ -47,7 +47,7 @@ const useFood = () => {
     // }
 
     // console.log(data);
-    
+
 
     return [products, setProducts];
 };

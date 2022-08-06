@@ -15,7 +15,7 @@ const Menu = () => {
 
     // useEffect(() => {
     //     setLoading(true)
-    //     fetch("http://localhost:5000/foods")
+    //     fetch("https://cafeteria-x.herokuapp.com/foods")
     //         .then(res => res.json())
     //         .then(data => {
     //             setProducts(data)

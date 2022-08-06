@@ -1,14 +1,17 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { toast } from 'react-toastify';
 import { ImCross } from 'react-icons/im';
 import { useQuery } from 'react-query'
 import Loader from '../../shared/Loader';
 import { SharedBanner } from '../../shared/SharedBanner';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+    let navigate = useNavigate()
     let [inTotal, setInTotal] = useState(0);
     let [orders, SetOrders] = useState([]);
-    // axios.get('http://localhost:5000/orders/order').then(resp => {
+    // axios.get('https://cafeteria-x.herokuapp.com/orders/order').then(resp => {
 
     //     // console.log(resp.data.data);
     //     // SetOrders(resp.data.data);
@@ -16,7 +19,7 @@ const Cart = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders/order')
+        fetch('https://cafeteria-x.herokuapp.com/orders/order')
             .then(res => res.json())
             .then(result => {
                 console.log(result.data);
@@ -38,11 +41,20 @@ const Cart = () => {
     let couponValue = event => {
         event.preventDefault();
         let couponValue = event.target.coupon.value;
-        if (couponValue === 'dev.kayes') {
+        if (couponValue === 'kayes') {
             let discountPrice = sum - (sum / 10);
-            setInTotal(discountPrice)
-            console.log(inTotal)
+            setInTotal(discountPrice);
+            console.log(inTotal);
+            toast.success("Coupon Applied")
         }
+        else {
+            toast.error("Invalid Coupon")
+        }
+    }
+
+    let checkout = event => {
+        toast.success(`Your Order is knock at the Door.Total Cost ${inTotal}`)
+        // navigate('/')
     }
     return (
         <div>
@@ -122,7 +134,7 @@ const Cart = () => {
                                 }
                             </ul>
                         </div>
-                        <button className="btn border-none font-bold text-lg bg-[#FDCE29] rounded-t-none w-full overflow-hidden hover:bg-[#FDCE29] h-[56px] text-black">PROCEED TO CHECKOUT</button>
+                        <button onClick={checkout} className="btn border-none font-bold text-lg bg-[#FDCE29] rounded-t-none w-full overflow-hidden hover:bg-[#FDCE29] h-[56px] text-black">PROCEED TO CHECKOUT</button>
                     </div>
                 </div>
             </div>

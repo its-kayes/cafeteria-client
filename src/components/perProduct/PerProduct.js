@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
 import Description from './Description';
 import Information from './Information';
@@ -27,7 +28,7 @@ const PerProduct = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:5000/foods/${id}`,)
+        fetch(`https://cafeteria-x.herokuapp.com/foods/${id}`,)
             .then(res => res.json())
             .then(result => {
                 setItem(result.data)
@@ -55,7 +56,7 @@ const PerProduct = () => {
         }
         console.log(data);
 
-        fetch("http://localhost:5000/orders/order", {
+        fetch("https://cafeteria-x.herokuapp.com/orders/order", {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -63,7 +64,10 @@ const PerProduct = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(result => console.log(result));
+            .then(result => {
+                console.log(result);
+                toast.success("Order add to your cart");
+            });
 
     }
 
